@@ -261,7 +261,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "2a"
+      "sch_revision": "2b"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -576,7 +576,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "gerbers-charlie-boost-v2a/",
+      "plot": "gerbers-charlie-boost-v2b/",
       "pos_files": "gerbers-charlie-boost-v2a/",
       "specctra_dsn": "",
       "step": "solar-light-charlie-boost.step",
