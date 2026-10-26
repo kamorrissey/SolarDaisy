@@ -1,3 +1,5 @@
+// #define BATTERY_CHECK
+
 #include <stdbool.h>
 #include "mcc_generated_files/system/system.h"
 
@@ -80,13 +82,17 @@ static void State_Init_Enter(void)
     PIR5bits.CM1IF = 0;     // discard edge from power-up settling
     PIE5bits.CM1IE = 1;     // enable CMP1 rising/falling-edge interrupt    Timer1_OverflowCallbackRegister(led6_timer_interrupt_handler);
     Timer1_OverflowCallbackRegister(Timer1_ISR);
+#ifdef BATTERY_CHECK
     Timer0_OverflowCallbackRegister(Battery_ISR);
+#endif
     jsf8_seed(1);
 }
 
 static void State_Init_Handle(void)
 {
+#ifdef BATTERY_CHECK
     Battery_FetchReading();
+#endif
     FSM_Set_Next_State(
         &FSM,
         (App_ShouldSleep() ? &State_Charging : &State_Active)
@@ -108,7 +114,9 @@ static void Diag_Report(void)
 
 static void State_Charging_Enter(void)
 {
+#ifdef BATTERY_CHECK
     Timer0_Start();
+#endif
 }
 
 static void State_Charging_Handle(void)
@@ -125,18 +133,24 @@ static void State_Charging_Handle(void)
 
 static void State_Charging_Exit(void)
 {
+#ifdef BATTERY_CHECK
     Timer0_Stop();
+#endif
 }
 
 static void State_Active_Enter(void)
 {
     LedCC_SetDisplayState(1);
     led6_init();
+#ifdef BATTERY_CHECK
     Battery_Initialize();
+#endif
     Timer2_PeriodSet(0x3F);
     Timer2_Start();
     Timer1_Start();
+#ifdef BATTERY_CHECK
     Timer0_Start();
+#endif
 }
 
 static void State_Active_Handle(void)
@@ -154,7 +168,9 @@ static void State_Active_Exit(void)
     LedCC_SetDisplayState(0);
     Timer2_Stop();
     Timer1_Stop();
+#ifdef BATTERY_CHECK
     Timer0_Stop();
+#endif
     led6_off();
 }
 
@@ -166,6 +182,8 @@ void APP_Initialize(void)
 
 void APP_Run(void)
 {
+#ifdef BATTERY_CHECK
     Battery_Task();
+#endif
     FSM_Dispatch(&FSM);
 }
