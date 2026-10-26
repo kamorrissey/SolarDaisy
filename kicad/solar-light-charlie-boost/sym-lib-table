@@ -1,0 +1,11 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "2024-09-04_04-57-00") (type "KiCad") (uri "C:/Users/kamor/Dropbox/E-Projects/Assets/KiCad Libraries/TPS613221ADBVR/KiCADv6/2024-09-04_04-57-00.kicad_sym") (options "") (descr ""))
+	(lib (name "2024-09-04_05-25-24") (type "KiCad") (uri "C:/Users/kamor/Dropbox/E-Projects/Assets/KiCad Libraries/PIC12F1572_I_P/KiCADv6/2024-09-04_05-25-24.kicad_sym") (options "") (descr ""))
+	(lib (name "2024-09-06_22-16-43") (type "KiCad") (uri "C:/Users/kamor/Dropbox/E-Projects/Assets/KiCad Libraries/ATTINY85_20PU/KiCADv6/2024-09-06_22-16-43.kicad_sym") (options "") (descr ""))
+	(lib (name "pic12f1572-i_p") (type "KiCad") (uri "C:/Users/kamor/Dropbox/E-Projects/Assets/KiCad Libraries/ul_PIC12F1572-I-P/KiCADv6/pic12f1572-i_p.kicad_sym") (options "") (descr ""))
+	(lib (name "tps613221adbvr") (type "KiCad") (uri "C:/Users/kamor/Dropbox/E-Projects/Assets/KiCad Libraries/ul_PIC12F1572-I-P/KiCADv6/tps613221adbvr.kicad_sym") (options "") (descr ""))
+	(lib (name "2024-09-04_04-57-00") (type "KiCad") (uri "${KIPRJMOD}/2024-09-04_04-57-00.kicad_sym") (options "") (descr ""))
+	(lib (name "2024-09-04_05-25-24") (type "KiCad") (uri "${KIPRJMOD}/2024-09-04_05-25-24.kicad_sym") (options "") (descr ""))
+	(lib (name "2024-09-04_04-57-00") (type "KiCad") (uri "${KIPRJMOD}/2024-09-04_04-57-00.kicad_sym") (options "") (descr ""))
+)

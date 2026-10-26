@@ -1,0 +1,7 @@
+### Footprint positions - created on 2026-02-12T16:00:44-0700 ###
+### Printed by KiCad version 9.0.7
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val             Package                      PosX       PosY       Rot  Side
+U1        TPS613221ADBVR  SOT-23-5_HandSoldering   135.1280   -84.7560   90.0000  top
+## End
