@@ -10,6 +10,6 @@ There are four primary folders:
   1. [solidworks](solidworks) - SOLIDWORKS CAD projects for 3d printable parts
 
 ## Building
-Can be built with MPLAB X IDE or MPLAB for VS Code.
+Can be built with [MPLAB X IDE](https://www.microchip.com/mplab-x-ide) or MPLAB for VS Code.
 
 (Remainder to be provided)
